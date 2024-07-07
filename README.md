@@ -3,15 +3,48 @@
 
 ## Install
 
-# pnpm i or npm i
+```
 
-## starting application 
+$ pnpm i
 
-# pnpm dev or pnpm dev
+```
 
-or 
+- or
 
-# pnpm start or npm start
+```
 
+$ npm i
 
+```
 
+## Starting the application (normal)
+
+```
+
+$ pnpm start
+
+```
+
+- or
+
+```
+
+$ npm run start
+
+```
+
+## Starting the application (dev mode)
+
+```
+
+$ pnpm dev
+
+```
+
+- or
+
+```
+
+$ npm run dev
+
+```

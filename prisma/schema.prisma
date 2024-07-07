@@ -12,3 +12,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model file {
+  id          String   @id @default(uuid())
+  key         String
+  file        String
+  contentType String
+  public      String   @default("")
+  private     String   @default("")
+  linkLife    String   @default("")
+  createAt    DateTime @default(now())
+}

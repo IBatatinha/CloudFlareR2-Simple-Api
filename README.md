@@ -3,19 +3,15 @@
 
 ## Install
 
-$ pnpm i 
-
-## or 
-
-$ npm i
+# pnpm i or npm i
 
 ## starting application 
 
-$ pnpm dev or pnpm dev
+# pnpm dev or pnpm dev
 
-## or 
+or 
 
-$ pnpm start or npm start
+# pnpm start or npm start
 
 
 

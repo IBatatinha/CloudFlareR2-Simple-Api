@@ -23,7 +23,7 @@ export const generateLink = async (id:string) => {
       id 
     },
     data: { 
-      public: `https://pub-bff8f448ece84d1f9e857edc61a839be.r2.dev/${image.key}`,
+      public: `YOUR_PUBLIC_URL_HERE/${image.key}`,
       private: signedUrl,
       linkLife: '1 week'
     }

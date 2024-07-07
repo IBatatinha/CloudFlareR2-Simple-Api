@@ -54,4 +54,38 @@ export const files = async (fastify:any) => {
 
     return cloud
   })
+
+  fastify.post('/cloud', async (request:any) => { 
+    const getBodySchema = z.object({ 
+      url: z.string().min(1)
+    })
+
+    const { url } = getBodySchema.parse(request.body)
+
+    try {
+      const response = await fetch(url);
+  
+      if (response.ok) {
+        return { validate: true };
+      } else {
+        return { validate: false };
+      }
+    } catch (err) {
+      return err;
+    }
+  })
+
+  fastify.delete('/cloud/:id', async (request:any) => { 
+    const getParamsSchema = z.object({ 
+      id: z.string().uuid()
+    })
+
+    const { id } = getParamsSchema.parse(request.params)
+
+    const cloudFiles = await prisma.file.delete({ where: { id } })
+
+    if (!cloudFiles) throw new Error('It was not possible delete this file.')
+
+    return { res: 'success' }
+  })
 }
